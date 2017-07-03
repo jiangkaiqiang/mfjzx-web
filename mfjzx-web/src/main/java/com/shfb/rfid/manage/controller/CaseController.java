@@ -1,4 +1,5 @@
 package com.shfb.rfid.manage.controller;
+import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,6 +57,7 @@ public class CaseController extends BaseController {
 		}
 		cases.setTopcategory(topcategory);
 		cases.setSubcategory(subcategory);
+		cases.setAddtime(new Date());
 		cases.setContent("取到文件的内容转成html");
 		cases.setImg("取到文件的第一张照片");//该图片为列表图片，不需要加彩印
 		{
