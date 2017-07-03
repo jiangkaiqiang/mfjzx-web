@@ -1,0 +1,538 @@
+/*>=1025*/
+@media (min-width: 1025px) {
+	.header .header-navigation {
+		display: block !important;
+	}
+	.team-block .img-responsive {
+		display: inline-block;
+	}
+	.img-responsive {
+		display: inline-block;
+	}
+	.promo-block {
+	  height:700px;
+	}
+}
+/*<=1024*/
+@media (max-width: 1024px) {
+	/*.header {
+	 	top: 0;
+		bottom: auto;
+		padding: 5px 0;
+	}*/
+	.menuOpened {
+		background: #fff;
+	}
+	.header-mobi-ext .pull-right {
+		float: none !important;
+		clear: both;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.header .mobi-toggler {
+		display: block;
+	}
+	.header-mobi-ext .header-navigation {
+		float: none;
+		padding: 20px 0;
+		display: none;
+	}
+	.header-mobi-ext .header-navigation li {
+		float: none;
+		padding: 0;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.header-mobi-ext .header-navigation li:first-child a {
+		border-top: 1px solid #efefef;
+	}
+	.header-mobi-ext .header-navigation a {
+		border-bottom: 1px solid #efefef;
+		padding: 10px 0 10px 10px;
+		position: relative;
+		color: #666;
+	}
+	.header-mobi-ext .header-navigation a:hover,
+	.header-mobi-ext .header-navigation li.current a {
+		border-bottom: 1px solid #efefef;
+		background: #0066ff;
+		color: #fff;
+	}
+
+	.checkout-block .row div {
+		width: 100%;
+		text-align: center !important;
+	}
+	.checkout-block h2 {
+		text-align: center;
+	}
+	.checkout-block .text-right {
+		padding-top: 10px;
+	}
+
+    .large_bold_white{
+		padding-top:40px;
+	}
+	.promo-like-text p{
+	  font-size: 18px;
+	  padding: 22px 25px 17px;
+	}
+}
+/*<=992*/
+@media (max-width: 992px) {
+	/*.facts-block {
+	  min-height: 390px;
+	}*/
+	.facts-block h2 {
+	  margin-bottom: 60px;
+	}
+	.facts-block .item {
+	  font-size: 18px;
+	  width: 138px;
+	  height: 138px;
+	  text-transform: none;
+	}
+	.facts-block .item strong {
+	  font-size: 40px;
+	}
+
+	.ab-cirle-blue {
+	  bottom: 2px;
+	  left: 1%;
+	}
+	.ab-cirle-red {
+	  bottom: 49%;
+	  left: 37%;
+	}
+	.ab-cirle-green {
+	  bottom: 34%;
+	  right: 3%;
+	}
+
+	.team-block .item {
+	  margin-bottom: 30px;
+	}
+	.team-block .img-responsive {
+	  width: 100%;
+	}
+	.img-responsive {
+	  width: 100%;
+	}
+}
+/*>=760*/
+@media (min-width: 760px) {
+	.promo-block {
+	  height:650px;
+	}
+    .large_bold_white{
+      padding-top:150px;
+	  letter-spacing: 4px !important;
+	  font-size:60px;
+	}
+	.promo-like-text p{
+	  font-size: 20px;
+	  letter-spacing: 1px !important;
+	  padding: 0px 25px;
+	}
+}
+/*<=768*/
+@media (max-width: 768px) {
+	.services-block {
+	  padding-bottom: 20px;
+	}
+	.services-block .item {
+	  border: none;
+	  margin-bottom: 50px;
+	}
+
+	.about-block h4 {
+	  margin-bottom: 33px;
+	}
+	.ab-cirlce {
+	  width: 100px;
+	  height: 100px;
+	  padding-top: 15px;
+	}
+	.ab-cirlce i {
+	  font-size: 33px;
+	  line-height: 33px;
+	}
+	.ab-cirlce strong {
+	  padding-top: 5px;
+	  font-size: 16px;
+	  line-height: 1;
+	}
+	.ab-cirle-blue {
+	  bottom: 2px;
+	  left: 1%;
+	}
+	.ab-cirle-red {
+	  bottom: 52%;
+	  left: 37%;
+	}
+	.ab-cirle-green {
+	  bottom: 34%;
+	  right: 6%;
+	}
+	.promo-block {
+    height: 550px;
+    }
+	.large_bold_white{
+	  letter-spacing: 4px !important;
+	  font-size:50px;
+	}
+    .promo-like-text {
+		margin-top: 30px;
+	    font: 400 14px Microsoft YaHei;
+	}
+	.sidebar-news img {
+    width: 160px;
+    height: 80px;
+    float: left;
+}
+.sidebar-news h3 {
+    font: 600 14px Microsoft YaHei;
+    /*text-transform: none;*/
+    margin:0px 0px 5px 170px;
+}
+.sidebar-news .news-info {
+    color: #666666;
+    font: 12px Microsoft YaHei;
+    margin:0px 0px 5px 170px;
+}
+.sidebar-news .item-pics h3 {
+    font: 600 14px Microsoft YaHei;
+    /*text-transform: none;*/
+    margin:0px 0px 5px 0px;
+}
+.sidebar-news .item-pics .news-info {
+    color: #666666;
+    font: 12px Microsoft YaHei;
+    margin:5px 0px 5px 0px;
+}
+.sidebar-news .item-pics img {
+    width: 270px;
+    padding:10px 15px 10px 0px;
+    height: 160px;
+    float: left;
+}
+
+.geeks-list .geek-item-img{
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 150px !important;
+}
+.geeks-list .geek-item-img-v{
+    position: absolute;
+    transform: translate3d(-20px,15px,0);
+    -webkit-transform: translate3d(-20px,15px,0); /* Safari 和 Chrome */
+    -moz-transform: translate3d(-20px,15px,0);/* Firefox */
+    -o-transform: translate3d(-20px,15px,0);/* Opera */
+	-ms-transform: translate3d(-20px,15px,0); /* IE 9 */
+}
+.geeks-list .geek-item .geek-item-content{
+    /*float: left;*/
+    overflow: hidden;
+}
+.geeks-list .geek-item .geek-item-name{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    width: 100%;
+}
+.geeks-list .geek-item .geek-item-score{
+    display: block;
+    color: #888;
+}
+.geeks-list .geek-item .geek-item-desc{
+    display: block;
+    height: 36px;
+    margin-top: 4px;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #888;
+}
+.geeks-list .geek-item .geek-item-tags{
+    float: right;
+    top:10px
+}
+.geeks-list .geek-item .geek-item-tags span{
+    text-align:center;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 5px;
+    margin: 0 2px 5px 0;
+    display: block;
+}
+.item h3{
+	padding-top:20px;
+}
+.news-block-tags em{
+	display:none !important;
+}
+.geek-item-tags{
+	  display:none !important;
+    }
+	.blog-item-body{
+		padding-left:60px;
+	}
+	
+	.searchSelect{
+	width:130px;
+}
+#geekProvinceUl, #PostProvinceUl{
+      width:130px;
+	}
+	 #geekProvinceUl a, #PostProvinceUl a{
+      width:130px;
+	}
+	#geekCityUl, #PostCityUl{
+	  width:130px;
+	  padding-left:135px;
+	}
+	#geekCityUl a, #PostCityUl a{
+	  width:130px;
+	}
+	#geekSchoolUl, #PostSchoolUl{
+	  width:130px;
+	  padding-left:270px;
+	}
+	#geekSchoolUl a, #PostSchoolUl a{
+	  width:130px;
+	}
+
+}
+/*<=767*/
+@media (max-width: 767px) {
+	.login {
+    background-size:auto !important;
+    }
+	.choose-us-block .img-responsive {
+	  margin: 0 auto;
+	}
+	.img-responsive {
+	  margin: 0 auto;
+	}
+
+	/*.facts-block {
+	  min-height: 470px;
+	}*/
+	.facts-block .item {
+	  margin-bottom: 30px;
+	}
+
+	.footer .pull-right {
+	  float: left !important;
+	  padding-top: 10px;
+	  padding-bottom: 11px;
+	}
+	.footer .social-icons li {
+	  float: left;
+	  margin: 0 5px 0 0;
+	}
+	.resume-img img{
+		display:none;
+	}
+}
+/*<=600*/
+@media (max-width: 600px) {
+	.login {
+    background-size:auto !important;
+    }
+	.large_bold_white{
+		margin-top: 70px;
+		font-size:40px;
+	}
+	.promo-like-text {
+		margin-top: 30px;
+		padding: 27px 22px 28px;
+		top: -18px;
+	    font-size: 13px;
+	}
+	.news_mune{
+		position:relative !important;
+		margin-bottom:10px;
+	}
+	.geek_mune{
+		position:relative !important;
+		margin-bottom:10px;
+	}
+	.post_bar_mune{
+		position:relative !important;
+		margin-bottom:10px;
+	}
+	.item h3{
+	padding-top:17px;
+    }
+}
+/*<=480*/
+@media (max-width: 480px) {
+	.ab-cirlce {
+	  z-index: 3;
+	}
+	.ab-cirle-red {
+	  bottom: 36px;
+	}
+    .large_bold_white{
+		margin-top: 70px;
+		font-size:30px;
+	}
+	.promo-block{
+		height:200px;
+	}
+	.promo-like-text {
+	  display:none;
+	}
+	.item h3{
+	padding-top:15px;
+    }
+	.news-block-tags{
+	display:none !important;
+    }
+	.geek-item-tags{
+	  display:none !important;
+    }
+	.business-card-line img{
+	  width:80% !important;
+	}
+	.blog-item-body-title  .blog-item-time{
+		display:none !important;
+	}
+	.blog-item-body img{
+		width:100% !important;
+		height:auto;
+	}
+	.login {
+    background-size:auto !important;
+    }
+	.searchSelect{
+	width:125px;
+} 
+    #geekProvinceUl , #PostProvinceUl{
+      width:125px;
+	}
+	 #geekProvinceUl a,#PostProvinceUl a{
+      width:125px;
+	}
+	#geekCityUl , #PostCityUl{
+	  width:125px;
+	  padding-left:130px;
+	}
+	#geekCityUl a, #PostCityUl a{
+	  width:125px;
+	}
+	#geekSchoolUl,#PostSchoolUl {
+	  width:125px;
+	  padding-left:260px;
+	}
+	#geekSchoolUl a, #PostSchoolUl a{
+	  width:125px;
+	}
+
+}
+/*<=400*/
+@media (max-width: 400px) {
+	.tb-socio .fa {
+	  margin-bottom: 20px;
+	}
+    .large_bold_white{
+		margin-top: 70px;
+		font-size:25px;
+		padding-bottom:40px;
+	}
+	.promo-block{
+		height:200px;
+	}
+	 .promo-like-text {
+	  display:none;
+	}
+	.sidebar-news img {
+    width: 90px;
+    height: 45px;
+    float: left;
+}
+.sidebar-news h3 {
+    font: 600 12px Microsoft YaHei;
+    /*text-transform: none;*/
+    margin:0px 0px 5px 95px;
+}
+.sidebar-news .news-info {
+    color: #666666;
+    font: 10px Microsoft YaHei;
+    margin:0px 0px 5px 95px;
+}
+.searchSelect{
+	width:106px;
+} 
+    #geekProvinceUl , #PostProvinceUl{
+      width:106px;
+	}
+	 #geekProvinceUl a,#PostProvinceUl a{
+      width:106px;
+	}
+	#geekCityUl , #PostCityUl{
+	  width:106px;
+	  padding-left:111px;
+	}
+	#geekCityUl a, #PostCityUl a{
+	  width:106px;
+	}
+	#geekSchoolUl,#PostSchoolUl {
+	  width:106px;
+	  padding-left:222px;
+	}
+	#geekSchoolUl a, #PostSchoolUl a{
+	  width:106px;
+	}
+   
+.resume-basic-info{
+		font-size:14px;
+	}
+}
+/*<=320*/
+@media (max-width: 320px) {
+	.tb-socio .fa {
+	  margin-bottom: 20px;
+	}
+
+	.ab-cirle-blue {
+	  left: 0;
+	}
+	.ab-cirle-red {
+	  left: 37%;
+	}
+	.ab-cirle-green {
+	  right: 0;
+	}
+	.searchSelect{
+	  width:93px;
+} 
+    #geekProvinceUl , #PostProvinceUl{
+      width:93px;
+	}
+	 #geekProvinceUl a,#PostProvinceUl a{
+      width:93px;
+	}
+	#geekCityUl , #PostCityUl{
+	  width:93px;
+	  padding-left:98px;
+	}
+	#geekCityUl a, #PostCityUl a{
+	  width:93px;
+	}
+	#geekSchoolUl,#PostSchoolUl {
+	  width:93px;
+	  padding-left:196px;
+	}
+	#geekSchoolUl a, #PostSchoolUl a{
+	  width:93px;
+	}
+.resume-basic-info{
+		font-size:12px;
+	}
+}
