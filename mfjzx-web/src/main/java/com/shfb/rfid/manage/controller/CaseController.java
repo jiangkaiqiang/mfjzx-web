@@ -1,4 +1,5 @@
 package com.shfb.rfid.manage.controller;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.shfb.rfid.manage.dao.CasesMapper;
 import com.shfb.rfid.manage.dto.BaseDto;
 import com.shfb.rfid.manage.entity.Cases;
+import com.shfb.rfid.manage.util.Word07ToHtml;
 
 @Controller
 @RequestMapping(value = "/case")
@@ -19,10 +21,28 @@ public class CaseController extends BaseController {
 	@Autowired
 	private CasesMapper casesDao;
 	
+	@RequestMapping(value = "/findCaseListForIndex", method = RequestMethod.POST)
+	@ResponseBody
+	public Object findCaseListForIndex(@RequestParam(value="topcategory",required=false) Integer topcategory,
+			@RequestParam(value="subcategory",required=false) Integer subcategory) {
+		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory);
+		List<Cases> indexCases = new ArrayList<Cases>();
+		if (cases.size()>8) {
+			for (int i = 0; i < 8; i++) {
+				indexCases.add(cases.get(i));
+			}
+		}
+		else {
+			indexCases = cases;
+		}
+		return indexCases;
+		
+	}
+	
 	@RequestMapping(value = "/findCaseList", method = RequestMethod.POST)
 	@ResponseBody
 	public Object findCaseList(@RequestParam(value="topcategory",required=false) Integer topcategory,
-			@RequestParam(value="subcategory") Integer subcategory) {
+			@RequestParam(value="subcategory",required=false) Integer subcategory) {
 		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory);
 		return cases;
 		
@@ -43,26 +63,27 @@ public class CaseController extends BaseController {
 			@RequestParam(required = false) MultipartFile appendix0
 			){
 		Cases cases = new Cases();
+		Word07ToHtml word07ToHtml = new Word07ToHtml();
+		word07ToHtml.convertToHtml(appendix0);
+		word07ToHtml.getWordInfo(appendix0);
+		word07ToHtml.parserHtml();
 		if (title!=null&&!title.equals("")) {
 			cases.setTitle(title);
 		}
 		else {
-			cases.setTitle("取到文件的标题");
+			cases.setTitle(word07ToHtml.getTitle());
 		}
 		if (introduction!=null&&introduction.equals("")) {
 			cases.setIntroduction(introduction);
 		}
 		else {
-			cases.setIntroduction("取到文件的前一段文字，大约20个汉字");
+			cases.setIntroduction(word07ToHtml.getIntroduce());
 		}
 		cases.setTopcategory(topcategory);
 		cases.setSubcategory(subcategory);
 		cases.setAddtime(new Date());
-		cases.setContent("取到文件的内容转成html");
-		cases.setImg("取到文件的第一张照片");//该图片为列表图片，不需要加彩印
-		{
-			//第一张图片不加彩印先存储一遍，然后将图片加彩印之后存储到当前工程的img/casePic目录下保存
-		}
+		cases.setContent(word07ToHtml.getHtml());
+		cases.setImg(word07ToHtml.getImgs().get(0));//该图片为列表图片，不需要加彩印
 		casesDao.insert(cases);
 		return true;
 	}

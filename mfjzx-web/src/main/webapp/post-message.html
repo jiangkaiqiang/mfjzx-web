@@ -108,7 +108,7 @@
          <label class="col-md-1 control-label no-padding" style="font-size:16px">案例描述：</label> 
          <div class="col-md-4"> 
          <textarea ng-model="content" class="form-control ng-pristine ng-untouched ng-valid" rows="4"
-         placeholder="输入作品描述......"></textarea>
+         placeholder="输入案例描述......"></textarea>
          </div> 
         </div> 
         <div class="col-md-12 form-group">  
@@ -120,39 +120,15 @@
         </div>
         <div class="col-md-12 form-group"> 
          <label class="col-md-1 control-label no-padding" style="font-size:16px">一级分类：</label> 
-         <div class="mt-radio-inline col-md-9">
-              <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios3" id="optionsRadios3" value="1"  checked> 集装箱住宅   
-              </label>
-             <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios3" id="optionsRadios4" value="2" > 集装箱酒店  
-              </label>
-             <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios3" id="optionsRadios5" value="3" >  集装箱商业 
-              </label>
-              <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios3" id="optionsRadios6" value="4">  集装箱办公 
-              </label>
-               <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios3" id="optionsRadios7" value="5">  集装箱综合
-              </label>
-          </div>
+          <select id=""  class="form-control" style="height:35px;width:200px !important" ng-model="topcategory"
+                                    ng-disabled="editable" ng-change="topCatSelected(topcategory)"
+                                    ng-options="x.id as x.name for x in allTopCategory"></select>
 		</div> 
 		 <div class="col-md-12 form-group"> 
          <label class="col-md-1 control-label no-padding" style="font-size:16px">二级分类：</label> 
-         <div class="mt-radio-inline col-md-9">
-              <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios4" id="optionsRadios8" value="1"  checked> 集装箱住宅
-              </label>
-             <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios4" id="optionsRadios9" value="2" >集装箱公寓
-              </label>
-             <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios4" id="optionsRadios10" value="3" > 集装箱别墅
-              </label>
-              <label class="mt-radio margin-bottom-10 col-md-2 no-padding">
-                  <input type="radio" name="optionsRadios4" id="optionsRadios11" value="4"> 集装箱度假屋
-              </label>
+          <select id=""  class="form-control" style="height:35px;width:200px !important" ng-model="subcategory"
+                                    ng-disabled="editable" ng-change="subCatSelected(subcategory)"
+                                    ng-options="x.id as x.name for x in allSubCategory"></select>
           </div>
 		</div> 
        </div> 	

@@ -4,29 +4,26 @@ import java.util.List;
 
 import com.shfb.rfid.manage.dto.UploadFileEntity;
 
+
 public interface FtpService {
 
 	//public final static String HOST = "10.25.192.102";
 
-	//public final static String PUB_HOST = "42.121.130.177";
-	public final static String PUB_HOST = "192.168.31.210";
+	public final static String PUB_HOST = "42.121.130.177";
 
-	//public final static String USER_NAME = "pwftp";
-	public final static String USER_NAME = "ftpuser";
+	public final static String USER_NAME = "pwftp";
 
-	//public final static String PASSWORD = "!@QWaszx0o";
-	public final static String PASSWORD = "ftppass";
+	public final static String PASSWORD = "!@QWaszx0o";
 
 	public final static int PORT = 21;
 
-	public final static String BASEDIR = "/shfb";
+	public final static String BASEDIR = "/data";
 
 	public final static int READPORT = 8089;
 	
 	//public final static String READ_URL = "ftp://pwftp:!@QWaszx0o@filestorage-weilanshu.xyz/";
 	
 	public final static String READ_URL = "http://42.121.130.177:8080/";
-	public final static String FILE_Url = "http://component.iok.la:41365/shfb/";
 	
 	//public final static String READ_URL = "http://139.196.189.93:8089/";
 	

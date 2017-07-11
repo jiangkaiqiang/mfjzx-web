@@ -1,6 +1,6 @@
 package com.shfb.rfid.manage.dto;
 
-import org.springframework.web.multipart.MultipartFile;
+import java.io.InputStream;
 
 /**
  * @author jiangkaiqiang
@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public class UploadFileEntity {
 	private String name;// file name-->FTP client
-	private MultipartFile multipartFile;// multipartFile-->user upload file
+	private InputStream inputStreamFile;// multipartFile-->user upload file
 	//相对地址，不加 /
 	private String remoteNewDir;
 
@@ -21,12 +21,13 @@ public class UploadFileEntity {
 		this.name = name;
 	}
 
-	public MultipartFile getMultipartFile() {
-		return multipartFile;
+
+	public InputStream getInputStreamFile() {
+		return inputStreamFile;
 	}
 
-	public void setMultipartFile(MultipartFile multipartFile) {
-		this.multipartFile = multipartFile;
+	public void setInputStreamFile(InputStream inputStreamFile) {
+		this.inputStreamFile = inputStreamFile;
 	}
 
 	public String getRemoteNewDir() {
@@ -37,11 +38,13 @@ public class UploadFileEntity {
 		this.remoteNewDir = remoteNewDir;
 	}
 
-	public UploadFileEntity(String name, MultipartFile multipartFile, String remoteNewDir) {
+	public UploadFileEntity(String name, InputStream inputStreamFile,
+			String remoteNewDir) {
 		super();
 		this.name = name;
-		this.multipartFile = multipartFile;
+		this.inputStreamFile = inputStreamFile;
 		this.remoteNewDir = remoteNewDir;
 	}
 
+	
 }
