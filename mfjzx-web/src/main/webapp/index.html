@@ -24,6 +24,7 @@
         }
         a img {
             border: none;
+            heitht: 300px
         }
         a:link {
             color: #42413C;
@@ -76,25 +77,13 @@
             font-size: 14px;
         }
         .Container .content .Block {
-            width: 231px;
+            width: 223px;
             padding-right: 6px;
             padding-left: 6px;
             float: left;
             margin-bottom: 15px;
 
 
-        }
-        .Container .content .BlockLeft {
-            width: 231px;
-            padding-right: 6px;
-            float: left;
-            margin-bottom: 15px;
-        }
-        .Container .content .BlockRight {
-            width: 231px;
-            padding-left: 6px;
-            float: left;
-            margin-bottom: 15px;
         }
         .Container .content .image {
             width: 229px;
@@ -115,14 +104,10 @@
             padding-right: 10px;
             padding-left: 10px;
         }
-        .Container .content .Block .image:hover .topic a,
-        .Container .content .BlockLeft .image:hover .topic a,
-        .Container .content .BlockRight .image:hover .topic a {
+        .Container .content .Block .image:hover .topic a{
             color: #fff;
         }
-        .Container .content .Block .image .topic a:hover,
-        .Container .content .BlockLeft .image .topic a:hover,
-        .Container .content .BlockRight .image .topic a:hover {
+        .Container .content .Block .image .topic a:hover{
             text-decoration:underline;
         }
         .Container .content .image .description {
@@ -168,15 +153,7 @@
             background-color: #ecfdff;
         }
 
-        .Container .content .BlockLeft .image .topic a {
-            color: #008cd2;
-            text-decoration: none;
-        }
         .Container .content .Block .image .topic a {
-            color: #008cd2;
-            text-decoration: none;
-        }
-        .Container .content .BlockRight .image .topic a {
             color: #008cd2;
             text-decoration: none;
         }
@@ -221,11 +198,10 @@
 <div id="wowslider-container1">
     <div class="ws_images">
         <ul>
-            <li><a href="news/news2012030107.html" target="_blank"><img src="img/homepage/images/01.jpg" alt="集装箱别墅: containers of hope" id="wows1_0"/></a></li>
-            <li><a href="news/14032101.html" target="_blank"><img src="img/homepage/images/02.jpg" alt="集装箱宾馆：Container Guest House" id="wows1_1"/></a></li>
-            <li><a href="news/13120405.html" target="_blank"><img src="img/homepage/images/03.jpg" alt="集装箱购物中心： BOXPARK shoreditch 盒子公园" id="wows1_2"/></a></li>
-            <li><a href="news/12121709.html" target="_blank"><img src="img/homepage/images/04.jpg" alt="精致的移动式集装箱酒店: Snoozebox" id="wows1_3"/></a></li>
-            <li><a href="news/news2012032603.html" target="_blank"><img src="img/homepage/images/05.jpg" alt="气势恢宏的大型集装箱建筑：游牧集装箱博物馆" id="wows1_4"/></a></li>
+            <li><a href="news/news2012030107.html" target="_blank"><img src="img/homepage/images/new01.jpg" height="400" alt="集装箱别墅: containers of hope" id="wows1_0"/></a></li>
+            <li><a href="news/14032101.html" target="_blank"><img src="img/homepage/images/new02.jpg"  height="400" alt="集装箱宾馆：Container Guest House" id="wows1_1"/></a></li>
+            <li><a href="news/13120405.html" target="_blank"><img src="img/homepage/images/new03.jpg"  height="400" alt="集装箱购物中心： BOXPARK shoreditch 盒子公园" id="wows1_2"/></a></li>
+            <li><a href="news/12121709.html" target="_blank"><img src="img/homepage/images/new04.jpg" height="400" alt="精致的移动式集装箱酒店: Snoozebox" id="wows1_3"/></a></li>
         </ul>
     </div>
     <div class="ws_bullets"><div>
@@ -240,6 +216,8 @@
 </div>
 <script type="text/javascript" src="js/homepage/wowslider.js"></script>
 <script type="text/javascript" src="js/homepage/script.js"></script>
+
+
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/ng-file-upload.min.js"></script>

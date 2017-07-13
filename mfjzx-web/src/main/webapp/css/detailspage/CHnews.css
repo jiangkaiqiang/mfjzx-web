@@ -27,68 +27,6 @@ a:visited {
 a:hover, a:active, a:focus {
     text-decoration: none;
 }
-.header {
-    color: #FFF;
-    height: 80px;
-    padding-top: 10px;
-    clear: both;
-    background-color: #1d1d1d;
-}
-.header .content {
-    width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.header .content .logo {
-    font-size: 220%;
-    letter-spacing: 0.4em;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    float: left;
-    width: 35%;
-}
-.header .content .part2 {
-    float: left;
-    width: 50%;
-    text-align: center;
-    line-height: 2em;
-    word-spacing: .5em;
-}
-.header .content .line2 {
-    float: left;
-    width: 65%;
-    color: #e6e600;
-    margin-top: 21px;
-}
-.header .content .line2 .part1 {
-    float: left;
-    width: 50%;
-    text-align: center;
-    line-height: 2em;
-    word-spacing: 1em;
-    letter-spacing: 0.2em;
-}
-.menu .content {
-    width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-}
-.menu .content .menubar {
-    float: left;
-    width: 12.5%;
-    text-align: center;
-    line-height: 60px;
-}
-.menu .content .menubar:hover {
-    background: #222;
-}
-.menu {
-    height: 60px;
-    color: #FFF;
-    clear: both;
-    background-color: #333;
-}
 .Container .content {
     width: 960px;
     line-height: 27px;
@@ -101,31 +39,6 @@ a:hover, a:active, a:focus {
     width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-}
-.footer {
-    color: #FFF;
-    background-color: #000;
-    clear: both;
-}
-.footer .content {
-    width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.footer .content .copyright {
-    font-size: 13px;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    letter-spacing: 0.1em;
-}
-.menu .content .menubar a {
-    text-decoration: none;
-    color: #FFFFFF;
-    display: block;
-}
-.menu .content .menubar:hover a {
-    color: #00FF00;
 }
 .Container .content p {
     text-indent: 2em;
@@ -151,5 +64,11 @@ a:hover, a:active, a:focus {
     padding-top: 20px;
 }
 .Container .content h4,h5 {
+    text-align: center;
+}
+.Container .content .t1 {
+    text-align: left;
+}
+.Container .content .t2 {
     text-align: center;
 }
