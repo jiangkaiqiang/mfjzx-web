@@ -39,10 +39,10 @@
             height: 80px;
             padding-top: 10px;
             clear: both;
-            background-color: #000000;
+            background-color: #ffffff;
         }
         .header .content {
-            width: 960px;
+            width: 1160px;
             margin-right: auto;
             margin-left: auto;
         }
@@ -51,8 +51,8 @@
             letter-spacing: 0.4em;
             padding-top: 0px;
             float: left;
-            width: 10%;
-            top:17px;
+            width: 20%;
+            top:0px;
             position: relative;
         }
         .header .content .logo {
@@ -66,30 +66,105 @@
         }
         .header .content .part2 {
             float: left;
-            width: 50%;
-            text-align: right;
-            line-height: 1.2em;
+            width: 40%;
+            text-align: left;
+            line-height: 2em;
             word-spacing: -.2em;
             font-family: 楷体;
             font-size:25px;
-            color:#00FF00;
+            color:#000;
+        }
+        .header .content .tel {
+            float: right;
+            width: 40%;
+            text-align: right;
+            line-height: 1em;
+            word-spacing: -.2em;
+            font-family: 楷体;
+            font-size:25px;
+            color:#5A5A5A
+        }
+        .header .content .email {
+            float: right;
+            width: 40%;
+            text-align: right;
+            line-height: 1em;
+            word-spacing: -.2em;
+            font-family: 楷体;
+            font-size:25px;
+            color:#5A5A5A
         }
         .header .content .line2 {
-            float: right;
-            width: 55%;
+            float: left;
+            width: 60%;
             color: #e6e600;
             margin-top: 21px;
         }
         .header .content .line2 .part1 {
             float: left;
-            width: 50%;
-            text-align: center;
-            line-height: 2em;
-            word-spacing: 1em;
+            width: 40%;
+            text-align: left;
+            line-height: 1em;
+            word-spacing: 0.5em;
             letter-spacing: 0.2em;
             font-family: 楷体;
-            color:#4DCFB8;
+            color:#000;
 
+        }
+
+        .header .linea{
+            width:100%;
+            height:3px;
+            border:0px solid #fff;
+            background:#4DCFB8;
+            position:absolute;
+            top:98px;
+        }
+        .header .lineb{
+            width:100%;
+            height:3px;
+            border:0px solid #fff;
+            background:#4DCFB8;
+            position:absolute;
+            top:150px;
+        }
+
+        .menu .content {
+            width: 1160px;
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+
+        }
+        .menu .content .menubar {
+            float: left;
+            width: 12.5%;
+            text-align: center;
+            line-height: 60px;
+            font-size:20px;
+            font-family: 华文仿宋;
+        }
+        .menu .content .menubar:hover {
+            background: #fff;
+            font-family: 华文仿宋;
+
+            font-size:22px;
+        }
+        .menu {
+            height: 60px;
+            color: #FFF;
+            clear: both;
+            background-color: #ffffff;
+        }
+
+        .menu .content .menubar a {
+            text-decoration: none;
+            color: #4DCFB8;
+            display: block;
+            font-weight: bold;
+        }
+        .menu .content .menubar:hover a {
+            color: #0097DA;
         }
 
 
@@ -102,16 +177,31 @@
 
 <div class="header">
     <div class="content">
-        <div class="logoimg"><img src='../img/newlogo.png' width="80px" height="40px"></div>
-        <div class="logo"><strong>魔方集装箱网</strong></div>
+        <div class="logoimg"><img src='../img/newlogo2.png' width="200px" height="80px"></div>
+       <!-- <div class="logo"><strong>魔方集装箱网</strong></div>-->
         <div class="line2">
-            <div class="part1">规划 设计 制造 施工</div>
+            <div class="part1">专业设计·制造·施工服务商</div>
+            <div class="tel">Tel:1234 - 456 - 6787</div>
             <div class="part2">一 站 式 方 案 提 供 商</div>
+            <div class="email">Emali:9876 @ 123.com</div>
+        </div>
+
+    </div>
+    <div class="linea"></div>
+
+    <div class="menu">
+        <div class="content">
+            <div class="menubar"><a href="../index.html" target="_blank">首页</a></div>
+            <div class="menubar"><a href="../zhuZhaiPage.html" target="_blank">集装箱住宅</a></div>
+            <div class="menubar"><a href="../jiuDianPage.html" target="_blank">集装箱酒店</a></div>
+            <div class="menubar"><a href="../shangYePage.html" target="_blank">集装箱商业</a></div>
+            <div class="menubar"><a href="../banGongPage.html" target="_blank">集装箱办公</a></div>
+            <div class="menubar"><a href="../zongHePage.html" target="_blank">集装箱综合</a></div>
+            <div class="menubar"><a href="../aboutuspage.html" target="_blank">关于我们</a></div>
         </div>
     </div>
+    <div class="lineb"></div>
 </div>
-
-
 
 
 </body>
