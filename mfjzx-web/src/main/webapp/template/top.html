@@ -75,36 +75,47 @@
             color:#000;
         }
         .header .content .tel {
-            float: right;
-            width: 40%;
-            text-align: right;
-            line-height: 1em;
-            word-spacing: -.2em;
-            font-family: 楷体;
-            font-size:25px;
-            color:#5A5A5A
+            float: left;
+            width: 100%;
+            color:#000
         }
-        .header .content .email {
-            float: right;
-            width: 40%;
-            text-align: right;
+        .header.content.tel.graph{
+            width: 50%;
+        }
+        .header.content.contact.word{
+            width:50%;
+        }
+        .header .content.contact img{
+            padding-top: 10px;
+        }
+        .header .content.contact .email {
+            float: left;
+            width: 30%;
+            text-align: left;
             line-height: 1em;
             word-spacing: -.2em;
             font-family: 楷体;
-            font-size:25px;
+            font-size:15px;
             color:#5A5A5A
         }
         .header .content .line2 {
             float: left;
-            width: 60%;
+            width: 55%;
             color: #e6e600;
-            margin-top: 21px;
+            margin-top: 5px;
         }
-        .header .content .line2 .part1 {
+        .header .content .contact {
+            float: right;
+            width: 30%;
+            color: #000;
+            margin-top: 0px;
+        }
+        .header .content .part1 {
             float: left;
             width: 40%;
+            padding-top: 55px;
             text-align: left;
-            line-height: 1em;
+            line-height:1em;
             word-spacing: 0.5em;
             letter-spacing: 0.2em;
             font-family: 楷体;
@@ -141,7 +152,7 @@
             width: 12.5%;
             text-align: center;
             line-height: 60px;
-            font-size:20px;
+            font-size:18px;
             font-family: 华文仿宋;
         }
         .menu .content .menubar:hover {
@@ -179,15 +190,18 @@
     <div class="content">
         <div class="logoimg"><img src='../img/newlogo2.png' width="200px" height="80px"></div>
        <!-- <div class="logo"><strong>魔方集装箱网</strong></div>-->
-        <div class="line2">
-            <div class="part1">专业设计·制造·施工服务商</div>
-            <div class="tel">Tel:1234 - 456 - 6787</div>
-            <div class="part2">一 站 式 方 案 提 供 商</div>
-            <div class="email">Emali:9876 @ 123.com</div>
+        <div class="part1">专业设计·制造·施工服务商</div>
+        <div class="contact">
+            <div class="tel">
+                <div class="graph"><img src='../img/Tel.jpg' width="30" height="40">   1234 - 456 - 6787</div>
+            </div>
+            <div class="email">
+                <div class="graph"><img src='../img/email.jpg' width="30" height="40">   9876 @ 123.com</div>
+            </div>
         </div>
 
     </div>
-    <div class="linea"></div>
+    <!--<div class="linea"></div>-->
 
     <div class="menu">
         <div class="content">
