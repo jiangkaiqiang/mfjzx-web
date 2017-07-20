@@ -119,9 +119,13 @@ public class Word07ToHtml {
             int characters = docx.getProperties().getExtendedProperties().getUnderlyingProperties().getCharacters();
             List<XWPFParagraph> paras = docx.getParagraphs();
             String intro = "";
+            int whiteline=0;
             for (int i = 0; i < paras.size(); i++) {
-                if (i == 0) {
-                    title = paras.get(0).getText();
+                if (i == whiteline) {
+                    title = paras.get(i).getText();
+                    if(title.equals(" ")||title.equals("\n")){
+                    	whiteline++;
+                    }
                 } else {
                     if (paras.get(i).getText() != null) {
                         intro += paras.get(i).getText();
