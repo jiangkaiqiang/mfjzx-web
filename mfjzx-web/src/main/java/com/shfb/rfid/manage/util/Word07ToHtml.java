@@ -1,12 +1,16 @@
 package com.shfb.rfid.manage.util;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javax.imageio.stream.FileImageOutputStream;
+
 import org.apache.poi.xwpf.converter.core.FileImageExtractor;
 import org.apache.poi.xwpf.converter.core.FileURIResolver;
 import org.apache.poi.xwpf.converter.xhtml.XHTMLConverter;
@@ -28,7 +32,16 @@ public class Word07ToHtml {
     private String introduce;
     private List<String> imgs;
     private String html;
-    private static String baseDir = "mfjzx";
+    private String cover;
+    public String getCover() {
+		return cover;
+	}
+
+	public void setCover(String cover) {
+		this.cover = cover;
+	}
+
+	private static String baseDir = "mfjzx";
     public String getHtml() {
 		return html;
 	}
@@ -67,17 +80,37 @@ public class Word07ToHtml {
         this.imgs = imgs;
     }
 
-    public void byte2image(byte[] data) {
+    public void byte2image(byte[] data,boolean isCover) {
         if (data.length < 3) return;
         try {
            // FileImageOutputStream imageOutput = new FileImageOutputStream(new File(path));
             FtpService ftpService = new FtpServiceImpl();
     		String dir = String.format("%s/case", baseDir);
-    	    String fileName = String.format("pic_%s.%s", new Date().getTime(), "jpg");
-    		UploadFileEntity uploadFileEntity = new UploadFileEntity(fileName, new ByteArrayInputStream(data), dir);
+    		String fileName="";
+    		String srcImgPath =imgpath+ "tmp.jpg";
+    	    String iconPath = imgpath+"logo.jpg";
+    	    String targerPath =imgpath+ "target.jpg";
+    	    UploadFileEntity uploadFileEntity=null;
+    		if(isCover){
+    			fileName = String.format("cov_%s.%s", new Date().getTime(), "jpg");
+    			uploadFileEntity = new UploadFileEntity(fileName, new ByteArrayInputStream(data), dir);
+    		}else{
+    			FileImageOutputStream imageOutput = new FileImageOutputStream(new File(srcImgPath));
+    			imageOutput.write(data, 0, data.length);
+    			imageOutput.close();
+    			WaterMarkUtil.waterMarkImageByIcon(iconPath, srcImgPath, targerPath, 0.5f);  			
+    			FileInputStream fileInputStream = new FileInputStream(new File(targerPath));
+    			fileName = String.format("pic_%s.%s", new Date().getTime(), "jpg");
+    			uploadFileEntity = new UploadFileEntity(fileName, fileInputStream, dir);
+    		}
     		ftpService.uploadFile(uploadFileEntity);
     		String picFile = FtpService.READ_URL+"data/"+dir + "/" + fileName;
-    		imgs.add(picFile);
+    		if(isCover){
+    			cover=picFile;
+    		}else{
+    			imgs.add(picFile);
+    		}
+    		
             //imageOutput.write(data, 0, data.length);
             //imageOutput.close();
         } catch (Exception ex) {
@@ -98,6 +131,8 @@ public class Word07ToHtml {
             Document doc = Jsoup.parse(input, "UTF-8");
             doc.select("body div p").first().remove();
             doc.select("body div p br").first().remove();
+//          删去空行  
+            doc.select("body div").first().removeAttr("style");
             Elements imgsources = doc.select("img[src]");
             for (int i = 0; i < imgsources.size(); i++) {
                 imgsources.get(i).attr("src", imgs.get(i));
@@ -135,7 +170,10 @@ public class Word07ToHtml {
             introduce = intro.length() >= 40 ? intro.substring(0, 40) : intro;
             List<XWPFPictureData> pics = docx.getAllPictures();
             for (int i = 0; i < pics.size(); i++) {
-                byte2image(pics.get(i).getData());
+            	if(i==0){
+            		byte2image(pics.get(i).getData(),true);
+            	}
+                byte2image(pics.get(i).getData(),false);
             }
         } catch (Exception e) {
             e.printStackTrace();

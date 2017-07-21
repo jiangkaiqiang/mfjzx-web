@@ -83,7 +83,7 @@ public class CaseController extends BaseController {
 		cases.setSubcategory(subcategory);
 		cases.setAddtime(new Date());
 		cases.setContent(word07ToHtml.getHtml());
-		cases.setImg(word07ToHtml.getImgs().get(0));//该图片为列表图片，不需要加彩印
+		cases.setImg(word07ToHtml.getCover());//该图片为列表图片，不需要加彩印
 		casesDao.insert(cases);
 		return true;
 	}
