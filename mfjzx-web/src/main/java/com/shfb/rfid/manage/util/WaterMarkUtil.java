@@ -45,6 +45,8 @@ public class WaterMarkUtil {
             g.dispose();
             os = new FileOutputStream(targerPath);
             ImageIO.write(buffImg, "JPG", os);
+           
+            
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
