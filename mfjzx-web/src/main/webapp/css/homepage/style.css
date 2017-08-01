@@ -88,7 +88,7 @@
 #wowslider-container1 .ws_bullets a {
     width:40px;
     height:20px;
-    background: url(bullet.png) left top;
+    background: url(../../img/homepage/engine/bullet.png) left top;
     float: left;
     text-indent: -4000px;
     position:relative;
@@ -111,7 +111,7 @@
     z-index:60;
     height: 5em;
     width: 5em;
-    background-image: url(arrows.png);
+    background-image: url(../../img/homepage/engine/arrows.png);
 }
 #wowslider-container1 a.ws_next{
     background-position: 100% 0;
