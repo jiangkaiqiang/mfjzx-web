@@ -27,17 +27,20 @@
      }
      .Container .content p {
          text-indent: 2em !important;
-         font-size: 23px !important;
+         font-size: 20px !important;
          margin-right: 0px !important;
          margin-left: 0px !important;
          line-height: 27px !important;
+         text-align : center !important;
+         max-width : 1000px;
      }
      .Container .content p a {
          color: #006 !important;
          text-decoration: none !important;
      }
      .Container .content p span {
-        font-size: 23px !important;
+        font-size: 16px !important;
+        color : #000 !important;
      }
      .Container .content table {
          font-size: 13px !important;
@@ -71,7 +74,7 @@
     <!-- InstanceBeginEditable name="content" -->
     <div class="content">
         <h1 align="center">{{Case.title}}</h1>
-        <p align="center" ng-bind="Case.addtime | date:'yyyy-MM-dd'">
+        <p align="center" style="font-size: 18px !important;" ng-bind="Case.addtime | date:'yyyy-MM-dd'">
         <!-- {{Case.addtime | date:'medium'}} -->
         </p>
         <div id="content" style="text-align:center"></div>
