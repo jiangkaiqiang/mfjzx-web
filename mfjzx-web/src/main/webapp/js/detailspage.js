@@ -8,7 +8,7 @@ angular.module('app', ['ngFileUpload']).controller('detailspage', function ($sco
 			}
 		}).success(function(data) {
 			$scope.Case = data;
-			document.getElementById("content").innerHTML=$scope.Case.content;
+			document.getElementById("content2").innerHTML=$scope.Case.content;
 		});
 	};
 	$scope.getCases();
