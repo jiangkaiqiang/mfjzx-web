@@ -13,10 +13,10 @@
      <style type="text/css">
 
      .Container .content {
-         width: 960px !important;
+         width: 800px !important;
          line-height: 27px !important;
          margin-right: auto !important;
-         margin-left: auto !important;
+         margin-left: 25% !important;
      }
      .Container {
          clear: both !important;
@@ -31,7 +31,7 @@
          margin-right: 0px !important;
          margin-left: 0px !important;
          line-height: 27px !important;
-         text-align : center !important;
+         text-align : left !important;
          max-width : 1000px;
      }
      .Container .content p a {
@@ -57,9 +57,13 @@
      .Container .content p {
          font-size: 15px !important;
      }
-     .Container .content img {
-         min-width:600px !important;
+     .Container .content p img {
+         min-width:650px !important;
          min-height:500px !important;
+         display: block !important;
+        clear: both !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
      }
 
      .
@@ -73,11 +77,11 @@
 <div class="Container">
     <!-- InstanceBeginEditable name="content" -->
     <div class="content">
-        <h1 align="center">{{Case.title}}</h1>
-        <p align="center" style="font-size: 18px !important;" ng-bind="Case.addtime | date:'yyyy-MM-dd'">
+        <h1>{{Case.title}}</h1>
+        <h2 style="text-align:center;font-size: 18px !important;" ng-bind="Case.addtime | date:'yyyy-MM-dd'">
         <!-- {{Case.addtime | date:'medium'}} -->
-        </p>
-        <div id="content" style="text-align:center"></div>
+        </h2>
+        <div id="content2" ></div>
 
         <!--文字class="t1",图片和图片说明class="t2"-->
     </div>
