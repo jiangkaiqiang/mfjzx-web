@@ -151,7 +151,12 @@
 			<if test="subcategory != null">
 				AND subcategory=#{subcategory}
 			</if>
+			<if test="keyword != null">
+		        AND title like "%"#{keyword}"%"
+		    </if>
 		</where>
 		order by `addtime` asc
 	</select>
+	
+	
 </mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bgmfjzx-web"
+  id="myeclipse.1465024770130"
+  context-root="/bgmfjzx-web"
+  j2ee-spec="6.0"
+  archive="bgmfjzx-web.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

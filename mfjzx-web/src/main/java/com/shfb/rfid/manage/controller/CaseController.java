@@ -1,4 +1,6 @@
 package com.shfb.rfid.manage.controller;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.shfb.rfid.manage.dao.CasesMapper;
 import com.shfb.rfid.manage.dto.BaseDto;
 import com.shfb.rfid.manage.entity.Cases;
@@ -25,7 +29,7 @@ public class CaseController extends BaseController {
 	@ResponseBody
 	public Object findCaseListForIndex(@RequestParam(value="topcategory",required=false) Integer topcategory,
 			@RequestParam(value="subcategory",required=false) Integer subcategory) {
-		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory);
+		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory,null);
 		List<Cases> indexCases = new ArrayList<Cases>();
 		if (cases.size()>8) {
 			for (int i = 0; i < 8; i++) {
@@ -43,10 +47,26 @@ public class CaseController extends BaseController {
 	@ResponseBody
 	public Object findCaseList(@RequestParam(value="topcategory",required=false) Integer topcategory,
 			@RequestParam(value="subcategory",required=false) Integer subcategory) {
-		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory);
+		List<Cases> cases = casesDao.findAllCases(topcategory, subcategory,null);
 		return cases;
 		
 	}
+	
+	@RequestMapping(value = "/findCaseListForBg", method = RequestMethod.POST)
+	@ResponseBody
+	public Object findCaseListForBg(@RequestParam(value="pageNum",required=false) Integer pageNum,
+			@RequestParam(value="pageSize") Integer pageSize, 
+			@RequestParam(value="keyword", required=false) String keyword) throws UnsupportedEncodingException {
+		pageNum = pageNum == null? 1:pageNum;
+		pageSize = pageSize==null? 12:pageSize;
+		PageHelper.startPage(pageNum, pageSize);
+		if(keyword.equals("undefined"))
+			keyword = null;
+		else{
+		keyword = URLDecoder.decode(keyword, "UTF-8");
+		}
+		return new PageInfo<Cases>(casesDao.findAllCases(null,null,keyword));
+		}
 	
 	/**
 	 * 增加案例发布
@@ -90,8 +110,17 @@ public class CaseController extends BaseController {
 	
 	@RequestMapping(value = "/updateCase")
 	@ResponseBody
-	public Object updateCase(Cases cases){
-		casesDao.updateByPrimaryKey(cases);
+	public Object updateCase(
+			@RequestParam(required = false) Integer caseid,
+			@RequestParam(required = false) String title,//标题
+			@RequestParam(required = false) String introduction,
+			@RequestParam(required = false) String content){
+		Cases cases = new Cases();
+		cases.setId(caseid);
+		cases.setTitle(title);
+		cases.setIntroduction(introduction);
+		cases.setContent(content);
+		casesDao.updateByPrimaryKeySelective(cases);
 		return new BaseDto(0);
 	}
 	

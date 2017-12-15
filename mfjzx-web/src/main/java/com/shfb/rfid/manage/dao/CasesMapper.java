@@ -21,5 +21,7 @@ public interface CasesMapper {
 
     int updateByPrimaryKey(Cases record);
     
-    List<Cases> findAllCases(@Param("topcategory")Integer topcategory, @Param("subcategory")Integer subcategory);
+    List<Cases> findAllCases(@Param("topcategory")Integer topcategory, @Param("subcategory")Integer subcategory
+    		,@Param("keyword")String keyword);
+    
 }
