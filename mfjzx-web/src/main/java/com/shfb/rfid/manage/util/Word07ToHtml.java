@@ -7,7 +7,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.imageio.stream.FileImageOutputStream;
 
@@ -148,6 +152,9 @@ public class Word07ToHtml {
     }
 
     public void getWordInfo(MultipartFile file) {
+    	 String regEx="[^0-9]";
+         Pattern p = Pattern.compile(regEx);
+         Map<Integer,Integer> map=new HashMap<Integer,Integer>();
         try {
             XWPFDocument docx = new XWPFDocument(file.getInputStream());
             int pages = docx.getProperties().getExtendedProperties().getUnderlyingProperties().getPages();
@@ -170,10 +177,20 @@ public class Word07ToHtml {
             introduce = intro.length() >= 40 ? intro.substring(0, 40) : intro;
             List<XWPFPictureData> pics = docx.getAllPictures();
             for (int i = 0; i < pics.size(); i++) {
+
+                String filename=pics.get(i).getFileName();
+                Matcher m = p.matcher(filename);
+                int trueNum=Integer.parseInt(m.replaceAll("").trim());
+                map.put(trueNum-1,i);
+
+            }
+            
+            for (int i = 0; i < pics.size(); i++) {
+            	int index=map.get(i);
             	if(i==0){
-            		byte2image(pics.get(i).getData(),true);
+            		byte2image(pics.get(index).getData(),true);
             	}
-                byte2image(pics.get(i).getData(),false);
+                byte2image(pics.get(index).getData(),false);
             }
         } catch (Exception e) {
             e.printStackTrace();
