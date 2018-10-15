@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     padding: 0;
     color: #000;
@@ -53,11 +53,11 @@ body {
     line-height: 24px;
 }
 .post-head h2 a{
-    font-size: 28px;
+    font-size: 20px;
 }
 .post-img {
-    height: 150px;
-    width: 223px;
+    height: 100px;
+    width: 200px;
     border: 1px solid #c3c3c5;
     padding: 3px;
     overflow:hidden;
@@ -72,11 +72,9 @@ body {
 }
 .post-txt p {
     line-height: 20px;
-    height: 108px;
+    height: 60px;
     overflow: hidden;
 }
-
-
 @charset "utf-8";
 body,h1,h2,h3,h4,h5,h6,p,ol,ul,dl,dd,textarea{margin:0;padding:0; }
 li{list-style:none;}

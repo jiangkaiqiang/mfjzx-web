@@ -9,7 +9,7 @@ public interface FtpService {
 
 	//public final static String HOST = "10.25.192.102";
 
-	public final static String PUB_HOST = "42.121.130.177";
+	public final static String PUB_HOST = "www.cubecontainers.cn";
 
 	public final static String USER_NAME = "pwftp";
 
@@ -23,7 +23,7 @@ public interface FtpService {
 	
 	//public final static String READ_URL = "ftp://pwftp:!@QWaszx0o@filestorage-weilanshu.xyz/";
 	
-	public final static String READ_URL = "http://42.121.130.177:8080/";
+	public final static String READ_URL = "http://www.cubecontainers.cn:8080/";
 	
 	//public final static String READ_URL = "http://139.196.189.93:8089/";
 	

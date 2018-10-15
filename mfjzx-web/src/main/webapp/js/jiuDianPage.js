@@ -4,7 +4,7 @@ angular.module('app', ['ngFileUpload']).controller('jiuDianPage', function ($sco
 			method : 'POST',
 			url : '/i/case/findCaseList',
 			params : {
-				topcategory : 1
+				topcategory : 2
 			}
 		}).success(function(data) {
 			$scope.AllJiuDianCases = data;

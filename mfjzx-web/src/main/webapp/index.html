@@ -1,12 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Keywords" content="集装箱,集装箱房屋,集装箱建筑,集装箱住宅,集装箱宾馆,集装箱酒店,集装箱公寓,集装箱别墅,集装箱超市,集装箱餐厅,集装箱咖啡馆" />
-    <meta name="Description" content="魔方集装箱网是专业的规划、设计、制造、施工一站式服务提供商,产品包括集装箱住宅,度假屋,旅社,餐厅,超市,购物中心,办公楼,学校,房车,展厅等" />
-    <title>魔方集装箱网</title>
-
-    <script src="js/homepage/wb.js" type="text/javascript" charset="utf-8"></script>
+    <meta name="Description" content="魔方集装箱网提供集装箱房屋定制、集装箱房屋改造、集装箱房屋报价，是国内领先的集装箱建筑规划、设计、制造、施工一站式服务商。" />
+    <title>集装箱房|集装箱房屋|集装箱房屋价格|活动房|酒店_魔方集装箱网</title>
+    <script src="../js/homepage/wb.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -77,7 +76,7 @@
             font-size: 14px;
         }
         .Container .content .Block {
-            width: 223px;
+            width: 231px;
             padding-right: 6px;
             padding-left: 6px;
             float: left;
@@ -85,6 +84,10 @@
 
 
         }
+	
+	.Container .content .Block:nth-child(4n+1){padding-right:0;}
+	.Container .content .Block:nth-child(4n+2){padding-left:0;}
+	.Container .content .Block:first-child{padding-left:0!important}
         .Container .content .image {
             width: 229px;
             height: 295px;
@@ -188,6 +191,16 @@
     <link rel="stylesheet" type="text/css" href="css/homepage/style.css" media="screen" />
     <script type="text/javascript" src="js/homepage/jquery.js"></script>
     <!-- End WOWSlider HEAD section -->
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?158c5a857540de5d6c6c4b414cb30ee5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 </head>
 
@@ -228,21 +241,7 @@
 
 
 
-<div class="Container">
-
-    <!-- share function -->
-    <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F967b0b80b3607b405e5eb6901d009981' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-
-    <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=6&amp;uid=516186" ></script>
-    <script type="text/javascript" id="bdshell_js"></script>
-    <script type="text/javascript">
-        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
-    </script>
-    <!-- share function  -->
-
+<div class="Container" style="margin:0px auto !important; text-align:center !important">
 
     <div class="sub01">
         <div class="content">
@@ -255,7 +254,7 @@
                 </div>
             </div>
             <div class="Block" ng-repeat="case in AllZhuZhaiCases">
-                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="集装箱别墅：Infiniski Manifesto House" /></a>
+                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="住宅家居类" /></a>
                     <div class="topic"><strong><a href="detailspage.html?id={{case.id}}" target="_blank">{{case.title}}</a></strong></div>
                     <div class="description">{{case.introduction}}</div>
                 </div>
@@ -274,7 +273,7 @@
                 </div>
             </div>
              <div class="Block" ng-repeat="case in AllJiuDianCases">
-                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="集装箱别墅：Infiniski Manifesto House" /></a>
+                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="酒店民宿类" /></a>
                     <div class="topic"><strong><a href="detailspage.html?id={{case.id}}" target="_blank">{{case.title}}</a></strong></div>
                     <div class="description">{{case.introduction}}</div>
                 </div>
@@ -293,7 +292,7 @@
                 </div>
             </div>
             <div class="Block" ng-repeat="case in AllShangYeCases">
-                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="集装箱别墅：Infiniski Manifesto House" /></a>
+                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="商业展示类" /></a>
                     <div class="topic"><strong><a href="detailspage.html?id={{case.id}}" target="_blank">{{case.title}}</a></strong></div>
                     <div class="description">{{case.introduction}}</div>
                 </div>
@@ -312,7 +311,7 @@
                 </div>
             </div>
             <div class="Block" ng-repeat="case in AllShangWuCases">
-                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="集装箱别墅：Infiniski Manifesto House" /></a>
+                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="商务办公类" /></a>
                     <div class="topic"><strong><a href="detailspage.html?id={{case.id}}" target="_blank">{{case.title}}</a></strong></div>
                     <div class="description">{{case.introduction}}</div>
                 </div>
@@ -331,7 +330,7 @@
                 </div>
             </div>
               <div class="Block" ng-repeat="case in AllGongGongCases">
-                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="集装箱别墅：Infiniski Manifesto House" /></a>
+                <div class="image"><a href="detailspage.html?id={{case.id}}" target="_blank"><img src="{{case.img}}" width="229" height="170" alt="公共空间类" /></a>
                     <div class="topic"><strong><a href="detailspage.html?id={{case.id}}" target="_blank">{{case.title}}</a></strong></div>
                     <div class="description">{{case.introduction}}</div>
                 </div>
@@ -339,8 +338,19 @@
         </div>
     </div>
 </div>
-
+<iframe frameborder="0" width="100%" height="155" src="template/button.html" scrolling="no"></iframe>
 <iframe frameborder="0" width="100%" height="100" src="template/bottom.html" scrolling="no"></iframe>
+<!-- share function -->
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F967b0b80b3607b405e5eb6901d009981' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
+    <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=6&amp;uid=516186" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+    </script>
+    <!-- share function  -->
 </body>
 </html>
