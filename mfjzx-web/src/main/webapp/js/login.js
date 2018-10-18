@@ -4,7 +4,7 @@ $(document).ready(function(){
 				  window.location.href = "http://"+ window.location.host + "/#/home";
 				}
 			});*/
-	window.localStorage.weburl = "http://www.cubecontainers.cn:8989";
+	window.localStorage.weburl = "";
 		});
 		
 		function showErrorInfo(msg){
@@ -59,7 +59,7 @@ $(document).ready(function(){
 											backUrl = "#/home";
 										}
 										window.localStorage.lkuser = $("#adminname").val();
-										window.location.href = "http://"+ window.location.host + "/"+ backUrl;
+										window.location.href = "bgindex.html";
 										window.Event.returnValue = false;
 									} else {
 									    $("#mention")[0].hidden = false;

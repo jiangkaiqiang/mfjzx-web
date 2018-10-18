@@ -54,7 +54,9 @@ public class Word07ToHtml {
 		this.html = html;
 	}
 
-	public static String imgpath = "G:\\WebTest\\";
+//	public static String imgpath = "G:\\WebTest\\";
+	//public static String imgpath = "D:/Developer/tomcat1/webapps/mfjzx-web/WebTest/";
+	public static String imgpath = "/usr/WebTest/";
 
     public Word07ToHtml() {
         imgs = new ArrayList<String>();
@@ -215,16 +217,6 @@ public class Word07ToHtml {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String args[]) {
-//        new Word07ToHtml().convertToHtml("I:\\WebTest\\HIGH CUBE咖啡厅，双十一前夕也得抽空看看.docx");
-        Word07ToHtml wordtrans=new Word07ToHtml();
-        String filename="I:\\WebTest\\HIGH CUBE咖啡厅，双十一前夕也得抽空看看.docx";
-//        wordtrans.convertToHtml(filename);
-//        wordtrans.getWordInfo(filename);
-        wordtrans.parserHtml();
-        System.out.println(wordtrans);
     }
 
 }

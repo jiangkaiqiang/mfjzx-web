@@ -11,13 +11,6 @@ import java.io.OutputStream;
  * 图片水印
  */
 public class WaterMarkUtil {
-    public static void main(String[] args) {
-        String srcImgPath = "I:\\test.jpg";
-        String iconPath = "I:\\logo.jpg";
-        String targerPath = "I:\\test2.jpg";
-        WaterMarkUtil.waterMarkImageByIcon(iconPath, srcImgPath, targerPath, 0.5f);
-    }
-
     public static void waterMarkImageByIcon(String iconPath, String srcImgPath, String targerPath, float clarity) {
         OutputStream os = null;
         try {

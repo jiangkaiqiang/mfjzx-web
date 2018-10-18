@@ -32,13 +32,17 @@ angular.module('app', ['ngFileUpload']).controller('post-message', function ($sc
     	if(topcategory=="5"){
     		$scope.allSubCategory = $scope.allSubCategory5;
     	}
+    	if(topcategory=="6"){
+    		$scope.allSubCategory = $scope.allSubCategory6;
+    	}
     };
     $scope.allTopCategory = [
 	                      {id:"1",name:"住宅家居类"},
 	                      {id:"2",name:"酒店民宿类"},
 	                      {id:"3",name:"商业展示类"},
 	                      {id:"4",name:"商务办公类"},
-	                      {id:"5",name:"公共空间类"}
+	                      {id:"5",name:"公共空间类"},
+	                      {id:"6",name:"新闻资讯"}
 	                      
 	];
     $scope.allSubCategory1 = [
@@ -71,6 +75,9 @@ angular.module('app', ['ngFileUpload']).controller('post-message', function ($sc
         	                      {id:"3",name:"集装箱艺术馆"},
         	                      {id:"4",name:"集装箱健身房"}
         	];
+    $scope.allSubCategory6 = [
+    	                      {id:"1",name:"新闻资讯"}
+    	];
     function checkInput() {
 		var flag = true;
 		// 检查必须填写项

@@ -8,7 +8,7 @@ coldWeb.run(function (editableOptions, adminService, $location,$http) {
     editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
     /*$.ajax({type: "GET",cache: false,dataType: 'json',url: weburl+'/i/admin/findAdmin'}).success(function(data){
       	admin = data.entity;*/
-        window.localStorage.weburl = "http://www.cubecontainers.cn:8989";
+        window.localStorage.weburl = "";
         admin = window.localStorage.lkuser;
       	if(admin == null || admin==''||admin==undefined){
   			url = "login.html";
@@ -42,30 +42,6 @@ coldWeb.config(function ($stateProvider, $urlRouterProvider) {
     }).state('home', {
         url: '/home',
         controller: 'home',
-        templateUrl: 'app/template/home.html'
-    }).state('publishManage', {
-        url: '/publishManage',
-        controller: 'publishManage',
-        templateUrl: 'app/template/publishManage.html'
-    }).state('commentManage', {
-        url: '/commentManage',
-        controller: 'commentManage',
-        templateUrl: 'app/template/commentManage.html'
-    }).state('infoManage', {
-        url: '/infoManage',
-        controller: 'infoManage',
-        templateUrl: 'app/template/infoManage.html'
-    }).state('schoolManage', {
-        url: '/schoolManage',
-        controller: 'schoolManage',
-        templateUrl: 'app/template/schoolManage.html'
-    }).state('operatinLog',{
-    	url: '/operationLog',
-    	controller: 'operationLog',
-    	templateUrl: 'app/template/operationLog.html'
-    }).state('responseManage', {
-        url: '/responseManage',
-        controller: 'responseManage',
-        templateUrl: 'app/template/responseManage.html'
+        templateUrl: 'home.html'
     });
 });
